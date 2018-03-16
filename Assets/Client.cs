@@ -55,6 +55,7 @@ public class Client : MonoBehaviour
     }
 
     //вызывается при присоединении на сервер
+    //создает новый экзмепляр и отправляет сообщение на сервер
     void OnConnected(NetworkMessage message)
     {
         connected = true;
