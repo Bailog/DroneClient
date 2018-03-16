@@ -113,7 +113,8 @@ public class Client : MonoBehaviour
     //=====================================================
     //Кнопки
     //=====================================================
-
+    //подключение по введеному в поле ip адресу и вывод сообщения на 
+    //экран с результатом подлкючения
     public void ConnectClick()
     {
         ip = InputServerIP.text;
@@ -121,6 +122,7 @@ public class Client : MonoBehaviour
         client.Connect(ip, port);
     }
     
+    //отключение от сервера и вывод на экран сообщения
     public void DisconnectClick()
     {
         client.Disconnect();
@@ -128,7 +130,9 @@ public class Client : MonoBehaviour
         ButtonDisconnect.interactable = false;
         ButtonConnect.interactable = true;
     }
-
+    
+    //выход из приложения, если клиент подключен, то
+    //сначала вызывается Disconnect()
     public void ExitClick()
     {
         if (connected) client.Disconnect();
