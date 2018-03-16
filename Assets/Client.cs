@@ -5,10 +5,13 @@ using UnityEngine.Networking;
 
 public class Client : MonoBehaviour
 {
+    //сетевые переменные
     int port = 8999;
     string ip;
-    private float f, r, u, s;
     bool connected = false;
+    
+    //переменные для обработки инпутов
+    private float f, r, u, s;
 
     public Button ButtonConnect;
     public Button ButtonDisconnect;
@@ -20,6 +23,7 @@ public class Client : MonoBehaviour
     short messageID = 1000;
     NetworkClient client;
 
+    //создание клиента и привязка функций ко всем 3 кнопкам
     void Start()
     {
         CreateClient();
