@@ -19,6 +19,8 @@ public class Client : MonoBehaviour
     public Text MessageLog;
     public InputField InputServerIP;
 
+    //создание нового экземпляра, который будет передавать
+    //значения виртуальной оси серверу
     InputContainer inputs = new InputContainer();
     short messageID = 1000;
     NetworkClient client;
